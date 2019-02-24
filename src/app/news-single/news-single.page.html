@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{article.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+      <ion-card>
+        <ion-img [src]="article.urlToImage"></ion-img>
+
+        <ion-card-content>
+          <ion-card-title style="color: #ffffff; font-size: 20px">{{article.title}}</ion-card-title>
+
+          <p style="color: rgba(255, 255, 255, 0.7);">{{article.description}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>

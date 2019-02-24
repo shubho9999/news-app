@@ -1,0 +1,19 @@
+ion-card {
+  transform: translateY(30px);
+  background-color: #424242;
+  border-radius: 20px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.para {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  overflow-wrap: break-word !important;
+  overflow: hidden !important;
+  width: 170px;
+  text-overflow: ellipsis;
+}

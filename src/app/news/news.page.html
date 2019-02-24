@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>
+        NEWS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
+    <!-- <ion-img [src]="article.urlToImage"></ion-img> -->
+
+    <ion-card-content no-padding>
+      <ion-grid>
+        <ion-row justify-content-center align-items-center>
+          <ion-col>
+            <div>
+              <ion-img style=" height: 100px;" [src]="article.urlToImage"></ion-img>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <p class="para">{{article.title}}</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!--<p style="color: rgba(255, 255, 255, 0.7);">{{article.description}}</p>-->
+    </ion-card-content>
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="loadMoreNews($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubble" loadingText="load news.."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
